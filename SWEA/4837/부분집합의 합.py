@@ -29,6 +29,8 @@ def getSubset():
     n = 12
     ret = [[0] * 101 for _ in range(13)]
 
+    # 부분집합의 갯수 만큼 돌면서 갯수가 곧 있냐 없냐를 판단하는 bit를 표현하기 때문에
+    # 그것을 i & ~~로 확인하면서 출력하는 것
     for i in range(1 << n):
         sum = 0
         count = 0
